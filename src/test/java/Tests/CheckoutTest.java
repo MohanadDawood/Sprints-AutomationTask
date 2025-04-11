@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class MainTest {
+public class CheckoutTest {
 
 
 
@@ -33,12 +33,13 @@ public class MainTest {
     homePage.itemSearch(searchItem);
     homePage.goToCatalogSearchPage();
     catalogSearchPage.addToCart("Adding...","Added","Add to Cart");
-    //catalogSearchPage.goToCheckoutPage();
+    catalogSearchPage.goToCheckoutPage();
     checkoutPage.fillShippingAddressForm("mohaneddawood990@gmail.com","Mohanad","Dawood","Sprints","test","test","test","321313131","Texas","United States");
     checkoutPage.goToPlaceOrderPage();
     placeOrderPage.placeOrder();
     placeOrderPage.goToSuccessOrderPage();
     driver.close();
     }
+
 
 }
