@@ -33,6 +33,9 @@ public class CatalogSearchPage extends AbstractComponent {
         waitTextToBePresentInElement(addToCartBtn,Text3,5);
         JavaScriptUtils.scrollTo(driver,0,0);
         driver.findElement(cartBtn).click();
+    }
+
+    public void goToCheckoutPage(){
         driver.findElement(checkoutBtn).click();
     }
 
